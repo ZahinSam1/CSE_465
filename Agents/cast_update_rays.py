@@ -92,7 +92,7 @@ def update_cast_rays(agent, walls):
     angle_step = np.abs((start_angle - end_angle) / 13)
 
     ray_angles = np.arange(start_angle, end_angle + angle_step, angle_step).tolist()  # Convert to a Python list
-    # ray_angles = [ray % 360 for ray in ray_angles]
+    ray_angles = [ray % 360 for ray in ray_angles]
     ray_lengths = []
 
     for angle in ray_angles:

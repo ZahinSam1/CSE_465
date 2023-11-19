@@ -1,6 +1,10 @@
 import math
 
 import numpy as np
+import os
+import sys
+
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
 
 class Agent:
@@ -22,6 +26,7 @@ class Agent:
 
         self.current_step = 0
         self.action = None
+        self.has_grabbed = False
 
         # these are for the angular motion of the agent
         self.angle = 0
@@ -116,6 +121,9 @@ class Agent:
 
             self.current_position = self.current_position + self.direction * self.movement_speed * speed_factor
             # self.get_direction()
+
+        # elif action == 3:
+
 
         # move back
         # elif action == 3:

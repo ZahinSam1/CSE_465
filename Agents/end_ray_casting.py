@@ -10,7 +10,7 @@ def get_cast_ray_angles(agent_angle):
 
     return ray_angles
 
-def is_ray_blocked(agent, wall_list):
+def cast_rays(agent, wall_list):
     
     ray_angles = get_cast_ray_angles(agent.angle)
     ray_lengths = []
